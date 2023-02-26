@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Hamuweb Invoice Maker</title>
+    <meta
+      name="description"
+      content="Create and send professional looking PDF invoices online. Free and simple online invoice template for your business. Automatically calculates taxes and totals for you. No limits. No registration required. "
+    />
+    <link
+      rel="shortcut icon"
+      href="https://invoiceto.me/icon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://invoiceto.me/apple-touch-icon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="./invoice_files/screen.css"
+      type="text/css"
+      media="screen, projection"
+    />
+    <link rel="stylesheet" href="./invoice_files/main.css" type="text/css" />
+    <script async="" src="./invoice_files/analytics.js.download"></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="./invoice_files/ga.js.download"
+    ></script>
+    <script
+      src="./invoice_files/jq.js.download"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script
+      src="./invoice_files/page.js.download"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script
+      src="./invoice_files/autogrow.js.download"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script
+      src="./invoice_files/textsaver.js.download"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <!--[if IE
+      ]><style type="text/css">
+        body {
+          zoom: 0.75;
+          margin-top: 150px !important;
+          margin-right: -300px;
+        }
+        #company {
+          width: 415px !important;
+        }
+      </style><!
+    [endif]-->
+    <script defer src="./invoice_files/click.js"></script>
+  </head>
+
+  <body>
+    <div class="x_page overlay"></div>
+    <div class="x_page">
+      <div class="x_window">
+        <div class="x_header">
+          Save invoice <a class="cta generate_pdf">DOWNLOAD PDF INVOICE</a></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="zoom_repl">
+      <form action="https://invoiceto.me/index.php" method="post">
+        <!--<p id="ad" class="tools" onClick="_gaq.push(['_trackEvent', 'Ad', 'Intercom']);"><span>Ad
+</span> <a href="http://intercom.io/">Intercom – communicate personally with every single customer</a></p>-->
+
+        <!--<p id="ad" class="tools">		 
+Welcome to InvoiceToMe. Free, unlimited online invoices.		
+</p>-->
+
+        <div class="tools" id="one">
+          <h5>Make your own invoice</h5>
+          <h5>Edit invoice →</h5>
+        </div>
+        <div class="tools" id="two">
+          <h5>Generate Invoice</h5>
+          <ul>
+            <li>
+              <a
+                id="open_pp"
+                onclick=""
+                class="button"
+                href="javascript:void(0)"
+                >Create New PDF</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="tools" id="three">
+          <h5>Arrange the line</h5>
+          <ul>
+            <li>
+              <a id="addRow" href="https://invoiceto.me/#" title="test"
+                ><span style="padding-right:5px;">+</span> Add new line</a
+              >
+            </li>
+            <li>
+              <a id="delRow" href="https://invoiceto.me/#"
+                ><span style="padding-right:5px;padding-left:1px;">–</span>
+                Remove line</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <input id="rowCounter" type="hidden" value="8" />
+
+        <div id="invoice" class="container">
+          <div id="header">
+            <input id="company" class="span-12 ll" value="Your Company Name" />
+            <input id="title" class="span-12 last rr" value="INVOICE UNPAID" />
+            <div id="address" class="span-12">
+              <input class="ll" value="123 Your Street" />
+              <input class="ll" value="Your Town" />
+              <input class="ll" value="Address Line 3" />
+              <input
+                style="margin-top:20px;"
+                class="ll"
+                value="(123) 456 789"
+              />
+              <input
+                style="margin-bottom:30px;"
+                class="ll"
+                value="email@yourcompany.com"
+              />
+            </div>
+            <div id="meta" class="span-12 last">
+              <input id="date" class="rr" value="12/11/2010" />
+              <input class="rr" value="Invoice #2334889" />
+              <input class="rr" value="PO 456001200" />
+              <input
+                style="margin-top:20px;"
+                class="client rr"
+                value="Att: Ms. Jane Doe"
+              />
+              <input
+                style="margin-bottom:30px;"
+                class="client rr"
+                value="Client Company Name"
+              />
+            </div>
+          </div>
+
+          <hr />
+
+          <textarea
+            class="notes growfield growfieldDummy"
+            id="textone"
+            cols="95"
+            rows="1"
+            style="resize: none; overflow: hidden; position: absolute; left: -9999px; top: 0px; height: 20px;"
+            name=""
+            tabindex="-9999"
+          >
+Dear Ms. Jane Doe,
+		
+Please find below a cost-breakdown for the recent work completed. Please make payment at your earliest convenience, and do not hesitate to contact me with any questions.
+		
+Many thanks,
+Your Name</textarea
+          ><textarea
+            class="notes growfield"
+            id="textone"
+            cols="95"
+            rows="1"
+            style="resize: none; overflow: hidden; height: 183px;"
+          >
+Dear Ms. Jane Doe,
+		
+Please find below a cost-breakdown for the recent work completed. Please make payment at your earliest convenience, and do not hesitate to contact me with any questions.
+		
+Many thanks,
+Your Name</textarea
+          >
+
+          <table class="span-24 last">
+            <thead>
+              <tr>
+                <th class="span-2"><input value="#" /></th>
+                <th class="span-10"><input value="Description" /></th>
+                <th class="span-4"><input value="Quantity" /></th>
+                <th class="span-4"><input value="Unit Price(RM)" /></th>
+                <th class="span-4"><input value="Total (RM)" /></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  class="noteditable"
+                  title="This field is done automatically"
+                >
+                  1
+                </td>
+                <td><input value="Laptop ROG ASUS 16GB" /></td>
+                <td><input value="2" /></td>
+                <td><input value="14000000" /></td>
+                <td
+                  class="noteditable"
+                  title="This field is done automatically"
+                >
+                  5000.00
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="noteditable"
+                  title="This field is done automatically"
+                >
+                  2
+                </td>
+                <td><input value="" /></td>
+                <td><input value="" /></td>
+                <td><input value="" /></td>
+                <td
+                  class="noteditable"
+                  title="This field is done automatically"
+                >
+                  -
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="noteditable"
+                  title="This field is done automatically"
+                >
+                  3
+                </td>
+                <td><input value="" /></td>
+                <td><input value="" /></td>
+                <td><input value="" /></td>
+                <td
+                  class="noteditable"
+                  title="This field is done automatically"
+                >
+                  -
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="noteditable"
+                  title="This field is done automatically"
+                >
+                  4
+                </td>
+                <td><input value="" /></td>
+                <td><input value="" /></td>
+                <td><input value="" /></td>
+                <td
+                  class="noteditable"
+                  title="This field is done automatically"
+                >
+                  -
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th id="subtotallabel" colspan="4" class="span-20">
+                  <input value="Subtotal" />
+                </th>
+                <th id="formsubtotal" class="span-4 noteditable">5000.00</th>
+              </tr>
+              <tr>
+                <th id="taxrate" colspan="4" class="span-20">
+                  <input value="Tax (10%)" />
+                </th>
+                <th id="formtax" class="span-4 noteditable">1000.00</th>
+              </tr>
+              <tr id="total">
+                <th id="totallabel" colspan="4" class="span-20">
+                  <input value="Total" />
+                </th>
+                <th id="formtotal" class="span-4 noteditable">6000.00</th>
+              </tr>
+            </tfoot>
+          </table>
+
+          <textarea
+            class="notes growfield growfieldDummy"
+            id="texttwo"
+            cols="95"
+            style="resize: none; overflow: hidden; position: absolute; left: -9999px; top: 0px; height: 20px;"
+            name=""
+            tabindex="-9999"
+          >
+Many thanks for your custom! I look forward to doing business with you again in due course.
+ 
+Payment terms: to be received within 60 days.</textarea
+          ><textarea
+            class="notes growfield"
+            id="texttwo"
+            cols="95"
+            style="resize: none; overflow: hidden; height: 99px;"
+          >
+Many thanks for your custom! I look forward to doing business with you again in due course.
+ 
+Payment terms: to be received within 60 days.</textarea
+          >
+        </div>
+
+        <textarea
+          name="html"
+          id="markup"
+          cols="60"
+          rows="20"
+          style="display:none;"
+        ></textarea>
+      </form>
+    </div>
+  </body>
+</html>
