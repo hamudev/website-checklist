@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8" />
+    <title>All Hamuweb SOP Link</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="icon" href="favicon.png">
+    <style>
+      body {
+        padding: 20px 30px;
+        text-align: center;
+        background: #e6fff2;
+      }
+
+      .content {
+        max-width: 1000px;
+        text-align: left;
+        display: inline-block;
+      }
+
+      .name {
+        font-size: 24px;
+      }
+
+      .unfinished {
+        display: none;
+      }
+
+      .content ul {
+        list-style: none;
+      }
+
+      button {
+        margin: 2px 1px 2px 10px;
+        padding: 6px 14px;
+        margin: 5px 10px 5px 0px;
+        vertical-align: middle;
+        position: relative;
+        top: -4px;
+      }
+
+      #header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      @media only screen and (max-width: 500px) {
+        h1 {
+          font-size: 26px;
+          line-height: 28px;
+        }
+      }
+
+      @media only screen and (max-width: 900px) {
+        .url {
+          display: none;
+        }
+      }
+
+      .gsap-3-logo {
+        width: 20vw;
+        max-width: 150px;
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div id="header">
+        <h1>All Hamuweb SOP URL Link</h1>
+      </div>
+      <link href='//fonts.googleapis.com/css?family=Signika+Negative:300,400' rel='stylesheet' type='text/css'>
+      <ul>
+        <li>
+          <button data-link="https://toyyibpay.com/founder-viper">Copy URL</button>
+          <a class="name" href="https://toyyibpay.com/founder-viper" target="_blank">Pakej Founder VIPER</a>
+          <span class="url">https://toyyibpay.com/founder-viper</span>
+        </li>
+        <li>
+          <button data-link="https://toyyibpay.com/founder-phoenix">Copy URL</button>
+          <a class="name" href="https://toyyibpay.com/founder-phoenix" target="_blank">Pakej Founder PHOENIX</a>
+          <span class="url">https://toyyibpay.com/founder-phoenix</span>
+        </li>
+        <li>
+          <button data-link="https://toyyibpay.com/founder-harbor">Copy URL</button>
+          <a class="name" href="https://toyyibpay.com/founder-harbor" target="_blank">Pakej Founder HARBOR</a>
+          <span class="url">https://toyyibpay.com/founder-harbor</span>
+        </li>
+        <li>
+          <button data-link="https://toyyibpay.com/whatsapp-ecommerce-hamuweb">Copy URL</button>
+          <a class="name" href="https://toyyibpay.com/whatsapp-ecommerce-hamuweb" target="_blank">Whatsapp Ecommerce</a>
+          <span class="url">https://toyyibpay.com/whatsapp-ecommerce-hamuweb</span>
+        </li>
+        <li>
+          <button data-link="https://toyyibpay.com/shopee-pro-hamuweb">Copy URL</button>
+          <a class="name" href="https://toyyibpay.com/shopee-pro-hamuweb" target="_blank">Shopee PRO</a>
+          <span class="url">https://toyyibpay.com/shopee-pro-hamuweb</span>
+        </li>
+        <li>
+          <button data-link="https://toyyibpay.com/landing-page-hamuweb">Copy URL</button>
+          <a class="name" href="https://toyyibpay.com/landing-page-hamuweb" target="_blank">Landing Page</a>
+          <span class="url">https://toyyibpay.com/landing-page-hamuweb</span>
+        </li>
+      </ul>
+    </div>
+    <a href="https://greensock.com">
+      <img class="gsap-3-logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-3-logo.svg" width="150" />
+    </a>
+    <script>
+      //just for copy-to-clipboard functionality (add data-link attribute to any element)
+      (function() {
+        document.body.addEventListener('click', copy, true);
+        var copyElement = document.createElement("textarea");
+        copyElement.style.display = "none";
+        document.body.appendChild(copyElement);
+
+        function copy(e) {
+          var c = e.target.dataset.link;
+          copyElement.value = c;
+          if (c && copyElement.select) {
+            copyElement.style.display = "block";
+            copyElement.select();
+            try {
+              document.execCommand('copy');
+              copyElement.blur();
+              gsap.fromTo(e.target.parentNode, {
+                color: "white"
+              }, {
+                duration: 0.7,
+                color: "#989898"
+              });
+            } catch (err) {
+              alert('please press Ctrl/Cmd+C to copy');
+            }
+            copyElement.style.display = "none";
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
